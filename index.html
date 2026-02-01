@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - El Hadj El Bechir</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-color: #333;
+        --accent-color: #555;
+        --bg-light: #f9f9f9;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-color);
+        line-height: 1.6;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: white;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #eee;
+      }
+      .navbar-brand {
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+      .nav-link {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        color: #888 !important;
+        transition: color 0.3s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-color) !important;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 100px 0;
+        text-align: center;
+        background-color: white;
+      }
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      .hero .subtitle {
+        font-size: 1.2rem;
+        color: #777;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+      .quote {
+        font-style: italic;
+        color: #999;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      /* Section Titles */
+      .section-title {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 80px 0;
+        background-color: var(--bg-light);
+      }
+      .skill-tag {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin: 0 5px 5px 0;
+        display: inline-block;
+      }
+
+      /* Projects / Case Studies */
+      .projects-section {
+        padding: 80px 0;
+      }
+      .project-card {
+        border: none;
+        transition: transform 0.3s ease;
+        margin-bottom: 30px;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+      .project-img-placeholder {
+        height: 200px;
+        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        font-size: 3rem;
+      }
+      .card-body {
+        padding: 2rem;
+      }
+      .card-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+      .card-text {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 80px 0;
+        background-color: #333;
+        color: white;
+      }
+      .contact-section h2 {
+        color: white;
+      }
+      .form-control {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 0;
+        padding: 15px;
+        color: white;
+        margin-bottom: 20px;
+      }
+      .form-control:focus {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        box-shadow: none;
+      }
+      .btn-submit {
+        background-color: white;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 12px 30px;
+        border: none;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+      }
+      .btn-submit:hover {
+        background-color: #ddd;
+      }
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        margin-right: 20px;
+        transition: opacity 0.3s;
+      }
+      .social-links a:hover {
+        opacity: 0.7;
+      }
+
+      /* Footer */
+      footer {
+        padding: 30px 0;
+        background-color: #222;
+        color: #777;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">EL HADJ EL BECHIR</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">À Propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>El Hadj El Bechir</h1>
+        <div class="subtitle">
+          Développeur Full Stack & Étudiant en Informatique
+        </div>
+        <div class="quote">
+          "Passionné par la création de solutions logicielles efficaces et
+          l'optimisation des processus par la technologie."
+        </div>
+        <div class="mt-5">
+          <a href="#contact" class="btn btn-outline-dark rounded-0 px-4 py-2"
+            >TRAVAILLONS ENSEMBLE</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">À Propos de moi</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <h3>Qui suis-je ?</h3>
+            <p>
+              Je suis étudiant en 4ème année de Sciences Informatiques à
+              l'Université d'Ottawa (GPA 9.4/10), spécialisé dans le
+              développement web Full Stack et l'ingénierie logicielle. Mon
+              parcours combine une solide base académique avec plusieurs
+              expériences pratiques en entreprise.
+            </p>
+            <p>
+              Actuellement basé à Ottawa/Gatineau, je développe des solutions
+              robustes en utilisant l'écosystème React et Node.js.
+            </p>
+
+            <h4 class="mt-4 h5 text-uppercase">Mes Compétences</h4>
+            <div class="skills-container mt-3">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">AWS (EC2, S3)</span>
+              <span class="skill-tag">Docker/CI-CD</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-white p-4 shadow-sm h-100">
+              <h3 class="h4 text-uppercase mb-3">Comment je travaille</h3>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <i class="fas fa-users me-2 text-secondary"></i>
+                  <strong>Collaboratif & Agile :</strong> J'ai de l'expérience
+                  avec les méthodologies Agiles, les réunions fréquentes et
+                  l'intégration des feedbacks (testeurs/clients) pour améliorer
+                  l'UX.
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-cogs me-2 text-secondary"></i>
+                  <strong>Automatisation :</strong> Je cherche toujours à
+                  réduire le travail manuel et les erreurs humaines (ex:
+                  automatisation de requêtes SQL, pipelines CI/CD).
+                </li>
+                <li>
+                  <i class="fas fa-laptop-code me-2 text-secondary"></i>
+                  <strong>Full Lifecycle :</strong> Je m'implique de la
+                  conception (diagrammes relationnels) jusqu'au déploiement
+                  (AWS, Nginx) et à la maintenance.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="projects-section">
+      <div class="container">
+        <h2 class="section-title">4 Études de Cas</h2>
+        <p class="text-center mb-5 text-muted">
+          Une sélection de mes projets académiques et professionnels récents.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="project-card">
+              <div class="project-img-placeholder">
+                <i class="fas fa-warehouse"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">E4A Inventory Tracker (PLM)</h3>
+                <p class="text-muted small mb-2">PROFESSIONNEL | 2025</p>
+                <p class="card-text">
+                  Conception et déploiement d'un logiciel de gestion du cycle de
+                  vie produit (PLM) pour Electronics 4 All. Le système suit
+                  l'inventaire et rationalise la gestion des produits.
+                </p>
+                <p class="small">
+                  <strong>Tech :</strong> React, Node.js, MongoDB, AWS EC2,
+                  Nginx.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="project-card">
+              <div class="project-img-placeholder">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Novigrad - Services Municipaux</h3>
+                <p class="text-muted small mb-2">ACADÉMIQUE | 2023</p>
+                <p class="card-text">
+                  Application Android permettant aux résidents de demander des
+                  documents officiels et aux employés municipaux de gérer les
+                  demandes. Utilisation de patrons de conception (Observer).
+                </p>
+                <p class="small">
+                  <strong>Tech :</strong> Java, Android Studio, Firebase,
+                  CircleCI.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="project-card">
+              <div class="project-img-placeholder">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">FindNN - Algorithme de Recherche</h3>
+                <p class="text-muted small mb-2">ACADÉMIQUE | 2023</p>
+                <p class="card-text">
+                  Implémentation d'une recherche efficace des "plus proches
+                  voisins" (Nearest Neighbor) utilisant des structures de
+                  graphes personnalisées. Applications en SIG et Machine
+                  Learning.
+                </p>
+                <p class="small">
+                  <strong>Tech :</strong> Java, Algorithmes de graphes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="project-card">
+              <div class="project-img-placeholder">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Pygame Space Invader</h3>
+                <p class="text-muted small mb-2">PERSONNEL | 2021</p>
+                <p class="card-text">
+                  Recréation du jeu d'arcade classique. Gestion modulaire des
+                  "sprites" et de la logique de jeu. Création et intégration
+                  d'assets graphiques personnalisés.
+                </p>
+                <p class="small">
+                  <strong>Tech :</strong> Python, Pygame, Photoshop.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container">
+        <h2 class="section-title mb-5">Expérience Professionnelle</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item py-4 border-0">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <div>
+                    <h5 class="mb-1 fw-bold">
+                      Développeur Logiciel (Co-op & Temps partiel)
+                    </h5>
+                    <p class="mb-0 text-muted">
+                      Electronics 4 All Inc. | Kanata, ON
+                    </p>
+                  </div>
+                  <div class="text-end mt-2 mt-md-0">
+                    <span class="badge bg-dark rounded-pill"
+                      >Sept 2022 - Présent</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-2 text-muted small">
+                  <em
+                    >Inclut stage Automne 2025 (Sept-Déc) & Hiver 2025
+                    (Jan-Avr).</em
+                  ><br />
+                  Maintenance du système PLM, CI/CD, et développement de
+                  nouvelles fonctionnalités.
+                </div>
+              </li>
+              <li class="list-group-item py-4 border-0">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <div>
+                    <h5 class="mb-1 fw-bold">
+                      Développeur Web Full Stack (Co-op)
+                    </h5>
+                    <p class="mb-0 text-muted">
+                      Attijari Bank | Nouakchott, Mauritanie
+                    </p>
+                  </div>
+                  <div class="text-end mt-2 mt-md-0">
+                    <span class="badge bg-secondary rounded-pill"
+                      >Mai 2024 - Août 2024</span
+                    >
+                  </div>
+                </div>
+                <div class="mt-2 text-muted small">
+                  Développement Laravel/PHP pour la gestion des stocks et
+                  automatisation des requêtes SQL.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h2 class="text-uppercase mb-4">Contactez-moi</h2>
+            <p class="mb-5 text-white-50">
+              Intéressé par une collaboration ou vous avez une question sur mes
+              projets ? N'hésitez pas à m'envoyer un message.
+            </p>
+
+            <div class="info-item mb-4">
+              <h5 class="text-uppercase h6 text-white-50">Email</h5>
+              <p>eelbe029@uottawa.ca</p>
+            </div>
+
+            <div class="social-links mt-5">
+              <a href="https://linkedin.com/in/eelbe029" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://github.com/eelbe029" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="mailto:eelbe029@uottawa.ca"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Nom" />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <input type="text" class="form-control" placeholder="Sujet" />
+              <textarea
+                class="form-control"
+                rows="5"
+                placeholder="Votre message"
+              ></textarea>
+              <button type="submit" class="btn btn-submit">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 El Hadj El Bechir. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
